@@ -1,6 +1,6 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f5f5f5; /* Fondo gris claro */
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Fondo gris claro */
     color: #333; /* Texto gris oscuro */
     margin: 0;
     padding: 20px;
@@ -16,13 +16,14 @@ body {
     background: #ffffff; /* Fondo blanco */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333; /* Color de texto gris oscuro */
+    color: #000; /* Texto negro */
+    font-size: 24px;
 }
 
 #data-list {
@@ -31,18 +32,19 @@ h1 {
 }
 
 .data-item {
-    background: #f9f9f9; /* Fondo gris muy claro */
-    padding: 10px;
+    background: #f5f5f5; /* Fondo gris muy claro */
+    padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Sombra más suave */
+    border-radius: 12px; /* Bordes redondeados para efecto de botón */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .data-item:hover {
-    background: #eaeaea; /* Fondo gris claro al pasar el cursor */
-    transform: scale(1.05);
+    background: #e0e0e0; /* Fondo gris claro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 #detail-view {
@@ -51,17 +53,17 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
-    color: #333; /* Texto gris oscuro */
+    background: rgba(255, 255, 255, 0.95); /* Fondo blanco con ligera transparencia */
+    color: #000; /* Texto negro */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: transform 0.3s;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 #detail-view.hidden {
@@ -69,7 +71,7 @@ h1 {
 }
 
 #close-detail {
-    background: #d9534f; /* Botón rojo suave */
+    background: #ff5c5c; /* Botón rojo claro */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -78,6 +80,11 @@ h1 {
     margin-bottom: 20px;
     font-size: 18px;
     align-self: flex-start;
+    transition: background 0.3s;
+}
+
+#close-detail:hover {
+    background: #e14e4e; /* Color más oscuro al pasar el cursor */
 }
 
 .detail-content {
@@ -86,14 +93,16 @@ h1 {
     background: #ffffff; /* Fondo blanco */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .detail-content p {
-    margin: 5px 0;
+    margin: 10px 0;
+    line-height: 1.5; /* Mejor separación entre líneas */
 }
 
 .detail-content .label {
     font-weight: bold;
     color: #333; /* Texto gris oscuro */
+    font-size: 16px;
 }
