@@ -36,7 +36,7 @@ h1 {
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 12px; /* Bordes redondeados para efecto de botón */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más oscura */
     cursor: pointer;
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
@@ -44,7 +44,7 @@ h1 {
 .data-item:hover {
     background: #e0e0e0; /* Fondo gris claro al pasar el cursor */
     transform: translateY(-2px); /* Efecto de elevación */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra más oscura al pasar el cursor */
 }
 
 #detail-view {
