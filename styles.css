@@ -1,0 +1,108 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    /* Estilo "matrix" */
+    background-color: #0f0;
+    /* Fondo verde, típico del estilo Matrix */
+    color: #0f0;
+    /* Texto verde */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    /* Tamaño máximo para dispositivos móviles */
+    background: rgba(0, 0, 0, 0.7);
+    /* Fondo negro semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0f0;
+}
+
+#data-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-item {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.data-item:hover {
+    background: rgba(0, 0, 0, 1);
+    transform: scale(1.05);
+    /* Efecto de acercamiento */
+}
+
+#detail-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    /* Asegura que esté encima de otros elementos */
+    transition: transform 0.3s;
+    transform: scale(0.9);
+    /* Efecto de acercamiento al mostrar */
+}
+
+#detail-view.hidden {
+    display: none;
+}
+
+#close-detail {
+    background: #f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+.detail-content {
+    width: 100%;
+    max-width: 500px;
+    /* Tamaño máximo para el contenido de detalle */
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.detail-content p {
+    margin: 5px 0;
+}
+
+.detail-content .label {
+    font-weight: bold;
+    color: #0f0;
+}
