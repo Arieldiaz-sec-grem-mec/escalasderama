@@ -1,10 +1,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    /* Estilo "matrix" */
-    background-color: #0f0;
-    /* Fondo verde, típico del estilo Matrix */
-    color: #0f0;
-    /* Texto verde */
+    background-color: #f5f5f5; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -16,18 +13,16 @@ body {
 .container {
     width: 100%;
     max-width: 600px;
-    /* Tamaño máximo para dispositivos móviles */
-    background: rgba(0, 0, 0, 0.7);
-    /* Fondo negro semi-transparente */
+    background: #ffffff; /* Fondo blanco */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #0f0;
+    color: #333; /* Color de texto gris oscuro */
 }
 
 #data-list {
@@ -36,19 +31,18 @@ h1 {
 }
 
 .data-item {
-    background: rgba(0, 0, 0, 0.8);
+    background: #f9f9f9; /* Fondo gris muy claro */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Sombra más suave */
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
 }
 
 .data-item:hover {
-    background: rgba(0, 0, 0, 1);
+    background: #eaeaea; /* Fondo gris claro al pasar el cursor */
     transform: scale(1.05);
-    /* Efecto de acercamiento */
 }
 
 #detail-view {
@@ -57,19 +51,17 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: #0f0;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    color: #333; /* Texto gris oscuro */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    /* Asegura que esté encima de otros elementos */
     transition: transform 0.3s;
     transform: scale(0.9);
-    /* Efecto de acercamiento al mostrar */
 }
 
 #detail-view.hidden {
@@ -77,7 +69,7 @@ h1 {
 }
 
 #close-detail {
-    background: #f00;
+    background: #d9534f; /* Botón rojo suave */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -91,11 +83,10 @@ h1 {
 .detail-content {
     width: 100%;
     max-width: 500px;
-    /* Tamaño máximo para el contenido de detalle */
-    background: rgba(0, 0, 0, 0.9);
+    background: #ffffff; /* Fondo blanco */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .detail-content p {
@@ -104,5 +95,5 @@ h1 {
 
 .detail-content .label {
     font-weight: bold;
-    color: #0f0;
+    color: #333; /* Texto gris oscuro */
 }
