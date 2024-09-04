@@ -11,16 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
             const rows = parseCSV(data);
             let listHtml = '';
 
+            // Generar el HTML para cada ítem de datos
             rows.slice(1).forEach(row => {
                 listHtml += `<div class="data-item" data-row='${JSON.stringify(row)}'>${row[0]}</div>`;
             });
 
             dataList.innerHTML = listHtml;
 
+            // Añadir evento de clic a los ítems de datos
             dataList.addEventListener('click', event => {
                 if (event.target.classList.contains('data-item')) {
                     const row = JSON.parse(event.target.getAttribute('data-row'));
-                    const headers = ['Descripción', 'Sueldo básico mensual', 'Sueldo básico jornal', 'Hora extra 50%', 'Hora extra 100%'];
+                    // Agregar aquí las nuevas columnas
+                    const headers = [
+                        'Categoria',
+                        'Sueldo básico mensual',
+                        'Sueldo básico jornal',
+                        'Hora ex. 50 %',
+                        'Hora ex. 100 %',
+                        'Viatico', // Cambia "Columna 6" por el nombre real de la columna
+                        'Comida'  // Cambia "Columna 7" por el nombre real de la columna
+                    ];
+
+                    // Mostrar los detalles en el modal
                     detailContent.innerHTML = headers.map((header, index) =>
                         `<p class="label">${header} : ${row[index] || ''}</p>`
                     ).join('');
@@ -29,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
+            // Añadir evento para cerrar la vista de detalles
             closeDetailBtn.addEventListener('click', () => {
                 detailView.classList.add('hidden');
             });
@@ -39,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
+// Función para parsear el CSV
 function parseCSV(data) {
     const rows = [];
     let row = [];
