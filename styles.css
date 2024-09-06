@@ -125,3 +125,22 @@ h1 {
     /* Texto gris oscuro */
     font-size: 16px;
 }
+
+#copy-detail {
+    background: #4caf50;
+    /* Botón verde */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 18px;
+    align-self: flex-start;
+    transition: background 0.3s;
+}
+
+#copy-detail:hover {
+    background: #45a049;
+    /* Color más oscuro al pasar el cursor */
+}
