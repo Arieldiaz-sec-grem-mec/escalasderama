@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const detailView = document.getElementById('detail-view');
     const detailContent = document.getElementById('detail-content');
     const closeDetailBtn = document.getElementById('close-detail');
+    const copyDetailBtn = document.getElementById('copy-detail');
 
     fetch(sheetUrl)
         .then(response => response.text())
@@ -22,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             dataList.addEventListener('click', event => {
                 if (event.target.classList.contains('data-item')) {
                     const row = JSON.parse(event.target.getAttribute('data-row'));
-                    // Agregar aquí las nuevas columnas
                     const headers = [
                         'Categoria',
                         'Sueldo básico mensual',
@@ -45,6 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
             // Añadir evento para cerrar la vista de detalles
             closeDetailBtn.addEventListener('click', () => {
                 detailView.classList.add('hidden');
+            });
+
+            // Añadir evento para copiar los detalles al portapapeles
+            copyDetailBtn.addEventListener('click', () => {
+                const textToCopy = detailContent.innerText;
+
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    alert('Detalles copiados al portapapeles.');
+                }).catch(err => {
+                    console.error('Error al copiar al portapapeles: ', err);
+                });
             });
         })
         .catch(error => {
