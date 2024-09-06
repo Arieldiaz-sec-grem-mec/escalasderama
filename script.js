@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/1j92sZraPFCeKvJDrWO7VYn0PzxGNGVxydfm2Tvwf3WY/pub?gid=0&single=true&output=csv';
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vThyiVHTLLGIVRrXoFdGSVhfjpJ-XARNuF8-jgP_0yGBrhrC6IWPSbm9JrcVmXBwiTzjhtbz16AebOH/pub?output=csv';
     const dataList = document.getElementById('data-list');
     const detailView = document.getElementById('detail-view');
     const detailContent = document.getElementById('detail-content');
